@@ -1,0 +1,368 @@
+:root {
+  --primary-color: #008DA4;
+  --primary-color-dark: #006777;
+  --custom-primary: rgba(0, 70, 90, 1);
+  --secondary-color: #FFA67A;
+  --secondary-color-dark: #FF884D;
+  --primary-font: 'Metal Mania', cursive;
+  --text-font: 'Teko', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: var(--primary-font);
+}
+
+body {
+  /* height: 500vh; */
+  /* background: #eee; */
+}
+
+img {
+  width: 100%;
+}
+
+
+/* Utilities */
+.text-primary {
+  font-family: var(--text-font);
+  color: var(--custom-primary);
+}
+
+.text-secondary {
+  font-family: var(--text-font);
+  font-weight: 300;
+}
+
+.item {
+  padding: .5rem .75rem;
+  margin: 0 .25rem;
+  text-align: center;
+  border-radius: .25rem;
+}
+
+.item:hover {
+  background-color: var(--primary-color-dark);
+  text-decoration: underline;
+}
+
+.item:hover a {
+  color: #000;
+}
+
+/* .item:active {
+  text-decoration: underline;
+} */
+
+.item-6 {
+  background-color: var(--secondary-color-dark);
+}
+
+.item-5 {
+  border: .1rem var(--primary-color-dark) solid;
+}
+
+.item-6:hover {
+  background-color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.lead {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  border-radius: .25rem;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-color-dark);
+}
+
+.btn {
+  padding: 1.15rem 3.25rem;
+  font-size: 2rem;
+  font-family: var(--text-font);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: .25rem;
+  box-shadow: .1rem .1rem .6rem .1rem #ddd;
+}
+
+
+/* Navigation */
+#main-navbar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 70, 90, 1);
+  border-top: .25rem var(--secondary-color-dark) solid;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#main-navbar .logo {
+  font-size: 3rem;
+}
+
+#main-navbar .logo a {
+  color: #000;
+  font-weight: bold;
+}
+
+#main-navbar .logo span {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+
+#main-navbar ul {
+  display: flex;
+  justify-content: center;
+}
+
+#main-navbar ul li a {
+  color: #222;
+  font-family: var(--text-font);
+  font-size: 1.5rem;
+}
+
+#main-navbar ul li a.current {
+  text-decoration: underline;
+}
+
+/* Showcase */
+#showcase {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url(/computer.jpg) no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+#showcase .showcase-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 4rem
+  /* Overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#showcase .showcase-content p {
+  margin: 4rem 2rem;
+  font-size: 4rem;
+}
+
+
+/* Gallery */
+#main-blog {
+  padding: 5rem;
+}
+
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+#main-blog > .text-primary {
+  font-size: 3rem;
+}
+
+#main-blog > .text-secondary {
+  font-size: 1.5rem;
+}
+
+#main-blog .card > img {
+  border-radius: .25rem;
+}
+
+#main-blog .card .title {
+  letter-spacing: .1rem;
+}
+
+#main-blog .card .title:hover {
+  text-decoration: underline;
+}
+
+#main-blog .card .card-text {
+  font-size: 1.25rem;
+}
+
+
+/* Footer */
+#main-footer {
+  background: var(--custom-primary);
+  padding: 1.25rem 4rem;
+  margin: auto;
+}
+
+
+#main-footer a {
+  font-family: var(--text-font);
+  font-weight: 300;
+  letter-spacing: .05rem;
+  color: #ccc;
+  line-height: 2rem;
+}
+
+#main-footer a:hover {
+  text-decoration: underline;
+}
+
+#main-footer p a {
+  margin-left: .5rem;
+}
+
+#main-footer .text-primary {
+  color: #fff;
+  letter-spacing: .15rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+#main-footer .text-secondary {
+  color: #eee;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+.footer-container > *:last-child {
+  grid-column: 1 / span 4;
+  text-align: center;
+  padding-top: .5rem;
+  font-size: 1.25rem;
+  word-spacing: .05rem;
+  letter-spacing: .05rem;
+}
+
+#main-footer .footer-container input[type="email"] {
+  width: 90%;
+  padding: .5rem;
+  border: none;
+  border-radius: .25rem;
+  margin-bottom: .5rem;
+  font-size: 1.25rem;
+  outline: none;
+  color: #000;
+}
+
+#main-footer .footer-container input[type="submit"] {
+  width: 40%;
+  background-color: var(--secondary-color-dark);
+  padding: .1rem .1rem;
+  border: none;
+  border-radius: .25rem;
+  margin-bottom: .5rem;
+  font-size: 1.25rem;
+  outline: none;
+}
+
+#main-footer .footer-container input[type="submit"]:hover {
+  background-color: var(--secondary-color);
+  text-decoration: none;
+  color: #333;
+}
+
+/* Sign-Up Form */
+#signup-head .logo {
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+#signup-head .logo a {
+  color: #000;
+  font-weight: bold;
+}
+
+#signup-head .logo span {
+  color: var(--secondary-color);
+  font-size: 3rem;
+}
+
+.form-container {
+  width: 30vw;
+  /* background: var(--primary-color); */
+  border-top: .5rem var(--primary-color) solid;
+  border-radius: .25rem;
+  padding: 2rem 5rem;
+  box-shadow: .1rem .1rem .6rem .1rem #ddd;
+}
+
+.form-container * {
+  font-family: var(--text-font);
+  width: 100%;
+}
+
+.signup {
+  margin: auto;
+}
+
+.signup label {
+  margin-bottom: .05rem;
+  font-size: 1.2rem;
+  letter-spacing: .1rem;
+}
+
+.signup input {
+  margin-bottom: .5rem;
+  height: 2rem;
+  padding: .5rem;
+  border: .05rem #ccc solid;
+  border-radius: .25rem;
+  font-weight: 200;
+  letter-spacing: .08rem;
+  font-size: 0.9rem;
+}
+
+.signup label, .signup input {
+  display: block;
+  /* border: none; */
+  outline: none;
+}
+
+.form-container .signup input[type="submit"] {
+  width: 80%;
+  margin: 2rem 0;
+  padding: 0;
+  background-color: var(--secondary-color-dark);
+  color: #444;
+  font-weight: 300;
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+}
+
+.form-container .signup input[type="submit"]:hover {
+  background-color: var(--secondary-color);
+  text-decoration: none;
+  color: #333;
+}
